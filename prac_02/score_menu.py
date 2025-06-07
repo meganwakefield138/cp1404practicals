@@ -6,21 +6,38 @@ Users can enter a valid score (0-100), display the result category, and exit.
 The program demonstrates function reuse and input validation
 """
 
-def display_menu():
+def main():
     """Displays the score menu"""
+    score = "10"
     print("Score Menu")
-    choice = input("Enter your choice: >").upper()
+    choice = input("Enter your choice: ").upper()
     while choice != "Q":
         if choice == "G":
-            pass
-        elif choice == "P"
-            pass
-        elif choice == "S"
-            pass
+            score = get_score()
+        elif choice == "P":
+            print(score)
+        elif choice == "S":
+            print_stars(score)
         else:
             print("Invalid choice. Please try again.")
-    print("Score Menu")
-    choice = input("Enter your choice: >").upper()
+        print("Score Menu")
+        choice = input("Enter your choice: ").upper()
+    print("Farewell!")
 
+def get_score():
+    score = input("Enter your score (0-100): ")
+    while not score.isdigit() or int(score) < 0 or int(score) > 100:
+        score = input("Invalid score. Please enter a valid score (0-100): ")
+    return int(score)
+
+def print_score(score):
+    "Print the score"
+    print(score)
+
+def print_stars(score):
+    "Print a number of stars equal to the score"
+    print("*" * score)
+
+main()
 
     
