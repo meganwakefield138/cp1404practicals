@@ -1,11 +1,11 @@
 """
 CP1404/CP5632 - Practical
-Random word generator - based on format of words
+Random word generator - based on the format of words
 
 Another way to get just consonants would be to use string.ascii_lowercase
 (all letters) and remove the vowels.
 """
-import random
+import randoms
 
 VOWELS = "aeiou"
 CONSONANTS = "bcdfghjklmnpqrstvwxyz"
