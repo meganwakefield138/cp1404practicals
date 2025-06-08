@@ -17,3 +17,13 @@ except ValueError:
 except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
+
+"Questions:"
+# 1. When will a ValueError occur?
+# When the user enters a non-numeric value for the numerator or denominator such as "a" or "1 2".
+
+# 2. When will a ZeroDivisionError occur?
+# When the user enters a denominator of 0.
+
+# 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
+# Yes, we can change the code to avoid the possibility of a ZeroDivisionError by adding a try-except block around the division operation.

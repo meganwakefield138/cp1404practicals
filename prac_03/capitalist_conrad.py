@@ -20,20 +20,21 @@ INITIAL_PRICE = 10.0
 FILENAME = "output.txt"
 
 price = INITIAL_PRICE
-number_of_days = 0
+number_of_days: int = 0
 
 out_file = open(FILENAME, "w")
 
 while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
     number_of_days += 1
-    # generate a random integer of 1 or 2
+    # Generate a random integer of 1 or 2
+    # If it's 1, the price will increase, otherwise it will decrease
     if random.randint(1, 2) == 1:
+        "Price increase"
         price_change = random.uniform(0, MAX_INCREASE)
-        print(f"Day {number_of_days}: price increases by {price_change}%", file=out_file)
     else:
+        "Price decrease"
         price_change = random.uniform(-MAX_DECREASE, 0)
-        print(f"Day {number_of_days}: price decreases by {price_change}%", file=out_file)
 
     price *= (1 + price_change)
     print(f"On day {number_of_days} price is ${price:,.2f}", file=out_file)
